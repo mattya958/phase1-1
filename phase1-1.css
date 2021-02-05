@@ -1,0 +1,99 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  height: 50px;
+  background-color: #ff9a4b;
+}
+
+main {
+  width: 960px;
+  margin: 50px auto;
+  flex-wrap: wrap; /*改行させる役割*/
+  align-items: center;　/*上下を中央に揃える*/
+  justify-content: space-between; /*左右を等間隔にする*/
+}
+
+.step-box {
+  width: 300px;
+  margin-right: 20px;
+  padding: 10px;
+  position: relative;
+  background-color: #eee;
+}
+
+.step-box:last-child {
+  margin-right: 0;
+}
+
+.step-img1 {
+  height: 150px;
+  background-image: url(img/flow01.png);
+  background-position: bottom;
+  background-size: cover;
+}
+
+.step-img2 {
+  height: 150px;
+  background-image: url(img/flow02.png);
+  background-position: bottom;
+  background-size: cover;
+}
+
+.step-img3 {
+  height: 150px;
+  background-image: url(img/flow03.png);
+  background-position: bottom;
+  background-size: cover;
+}
+
+.step-num {
+  padding: 3px;
+  position: absolute;
+  background-color: #ff9a4b;
+  color: #fff;
+}
+
+.title {
+  margin: 15px 0 5px;
+}
+
+footer {
+  height: 50px;
+  background-color: #aaa;
+}
+
+@media screen and (max-width: 768px;) {
+  header {
+    width: 100%;
+  }
+
+  main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .step-box {
+    width: 90%;
+  }
+
+  footer {
+    width: 100%;
+  }
+
+  .step-box {
+    flex-direction: column; /*横並びから縦並びに変更*/
+  }
+
+  .step-box+.step-box {
+    margin-top: 20px;
+  }
+
+  .step-box {
+    margin-right: 0;
+  }
+}
